@@ -2,9 +2,10 @@ import { useState, useRef } from 'react'
 import heroImg from './assets/hero.png'
 import axios from 'axios'
 import './App.css'
+import Weather from './components/Weather/Weather'
 
 function App() {
-  const [weather, setWeather] = useState({})
+  const [weather, setWeather] = useState()
   const inputRef = useRef()
 
   async function searchCity() {
@@ -21,6 +22,8 @@ function App() {
       <h1>Previsão do Tempo</h1>
       <input ref={inputRef} type="text" placeholder="Digite a cidade" />
       <button onClick={searchCity}>Buscar</button>
+
+      {weather && <Weather weather={weather}/>} 
     </div>
   )
 }
