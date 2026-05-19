@@ -1,13 +1,20 @@
 import { useState, useRef } from 'react'
 import heroImg from './assets/hero.png'
+import axios from 'axios'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
   const inputRef = useRef()
 
-  function searchCity() {
-    console.log(inputRef.current.value)
+  async function searchCity() {
+    const city = inputRef.current.value
+    const apiKey = import.meta.env.VITE_API_KEY
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+
+    const response = await axios.get(apiUrl)
+
+    console.log(response.data)
   }
 
   return (
