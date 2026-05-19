@@ -7,7 +7,9 @@ function App() {
 
   return (
     <div>
-
+      <h1>Previsão do Tempo</h1>
+      <input type="text" placeholder="Digite a cidade" />
+      <button>Buscar</button>
     </div>
   )
 }
