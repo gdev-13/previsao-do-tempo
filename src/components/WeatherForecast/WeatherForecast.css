@@ -37,3 +37,26 @@
     font-size: 0.9rem;
     text-transform: capitalize;
 }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .forecast-list {
+        gap: 12px;
+        justify-content: space-around;
+    }
+    .forecast-item {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .forecast-list {
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+    }
+    .forecast-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

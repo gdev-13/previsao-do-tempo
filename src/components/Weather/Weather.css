@@ -41,3 +41,39 @@ h2 {
 .weather-details p {
     flex: 1;
 }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .weather-main img {
+        width: 80px;
+        height: 80px;
+    }
+    .temperature {
+        font-size: 2rem;
+    }
+    .description {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .weather-main {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .weather-main img {
+        width: 72px;
+        height: 72px;
+    }
+    .temperature {
+        font-size: 1.6rem;
+    }
+    .weather-details {
+        flex-direction: column;
+        align-items: center;
+    }
+    .weather-details p {
+        flex: none;
+        width: 100%;
+    }
+}
