@@ -3,6 +3,7 @@ import heroImg from './assets/hero.png'
 import axios from 'axios'
 import './App.css'
 import Weather from './components/Weather/Weather'
+import WeatherForecast from './components/WeatherForecast/WeatherForecast'
 
 function App() {
   const [weather, setWeather] = useState()
@@ -28,7 +29,8 @@ function App() {
       <input ref={inputRef} type="text" placeholder="Digite a cidade" />
       <button onClick={searchCity}>Buscar</button>
 
-      {weather && <Weather weather={weather}/>} 
+      {weather && <Weather weather={weather}/>}
+      {weatherForecast && <WeatherForecast weatherForecast={weatherForecast} />}
     </div>
   )
 }

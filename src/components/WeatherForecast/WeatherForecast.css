@@ -1,0 +1,10 @@
+.forecast-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px 0;
+}
+
+h2 {
+    font-size: 2rem;
+}
