@@ -28,9 +28,9 @@ function WeatherForecast({ weatherForecast }) {
             <div className='forecast-list'>
                 {nextFiveDays.map(forecast => (
                     <div key={forecast.dt} className='forecast-item'>
-                        <p>{convertDate(forecast)}</p>
+                        <p className='forecast-day'>{convertDate(forecast)}</p>
                         <img src={`https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`} alt={forecast.weather[0].description} />
-                        <p>{forecast.weather[0].description}</p>
+                        <p className='forecast-description'>{forecast.weather[0].description}</p>
                         <p>{Math.round(forecast.main.temp)}°C</p>
                     </div>
                 ))}
